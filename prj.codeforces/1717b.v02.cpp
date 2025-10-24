@@ -6,7 +6,6 @@ void solve(){
     r--;
     c--;
     int important_thing = (r + c) % k;
-    char setka[n][n];
     
     for (int i = 0; i < n; i++){
         for (int j = 0; j < n; j++){
