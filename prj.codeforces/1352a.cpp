@@ -1,9 +1,10 @@
 #include <iostream>
+#include<vector>
 
 void solve() {
     int numb;
     std::cin >> numb;
-    int res[5];
+    std::vector<int>res(5);
     int cnt = 0;
     int mult = 1;
 
@@ -26,9 +27,9 @@ void solve() {
 }
 
 int main() {
-    int tr = 0;
-    std::cin >> tr;
-    while (tr--) {
+    int t;
+    std::cin >> t;
+    while (t--) {
         solve();
     }
 }
