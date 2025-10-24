@@ -1,11 +1,12 @@
 #include<iostream>
+#include<vector>
 
 void solve(){
     int n, k;
     std::cin >> n >> k;
     
     int cnt = 0;
-    char list[n];
+    std::vector<char>list(n);
     for (int i = 0; i < n; i++){
         std::cin >> list[i];
     }
