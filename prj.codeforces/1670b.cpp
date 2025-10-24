@@ -1,5 +1,6 @@
 #include<iostream>
 #include<string>
+#include<vector>
 
 void solve(){
     int n;
@@ -11,9 +12,10 @@ void solve(){
     
     int m;
     std::cin >> m;
-    
-    char spec[m];
-    bool is_special[26]{};
+
+    std::vector<char>spec(m);
+    std::vector<bool>(26, false);
+
     for(int i = 0; i < m; i++){
         char temp;
         std::cin >> temp;
