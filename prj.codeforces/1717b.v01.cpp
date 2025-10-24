@@ -1,9 +1,10 @@
 #include<iostream>
+#include<vector>
 
 void solve(){
     int n, k, r, c;
     std::cin >> n >> k >> r >> c;
-    char setka[3*n][3*n];
+    std::vector<std::vector<char>> setka(3*n, std::vector<char>(3*n));
     r--;
     c--;
     while(r >= 0){r -= k;}
@@ -33,9 +34,9 @@ void solve(){
 }
 
 int main(){
-    int tem;
-    std::cin >> tem;
-    while(tem--){
+    int t;
+    std::cin >> t;
+    while(t--){
         solve();
     }
 }
