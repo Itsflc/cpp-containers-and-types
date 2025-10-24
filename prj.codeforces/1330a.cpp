@@ -1,18 +1,19 @@
 #include<iostream>
+#include<vector>
 
 void solve(){
     int n, x;
     std::cin >> n >> x;
     int max = 0;
-    int places[n];
+    std::vector<int>places(n);
     
     for (int i = 0; i < n; i++){
         int temp;
         std::cin >> temp;
         places[i] = temp;
         if (temp > max) max = temp;}
-        
-    bool was[max + 1]{};
+
+    std::vector<bool>was(max + 1, false);
     for (int j = 0; j < n; j++){
         was[places[j]] = true;}
         
