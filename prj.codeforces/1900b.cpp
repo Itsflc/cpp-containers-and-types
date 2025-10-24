@@ -1,10 +1,11 @@
 #include<iostream>
+#include<vector>
 
 void solve(){
     int a, b, c;
     std::cin >> a >> b >> c;
     
-    int res[3]{};
+    std::vector<int>res(3,0);
     
     if ((b + c) % 2 == 0){
         res[0] = 1;
