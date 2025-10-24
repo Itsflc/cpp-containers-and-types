@@ -14,7 +14,7 @@ void solve(){
     std::cin >> m;
 
     std::vector<char>spec(m);
-    std::vector<bool>(26, false);
+    std::vector<bool>is_special(26, false);
 
     for(int i = 0; i < m; i++){
         char temp;
