@@ -1,23 +1,22 @@
 #include<iostream>
+#include<vector>
 
 int main(){
     int levels;
-    std::cin >> levels;
     int fir;
-    std::cin >> fir;
-    int first[fir];
+    std::cin >> levels >> fir;
+
+    std::vector<int>first(fir);
+
     for (int i = 0; i < fir; i++){
-        int current;
-        std::cin >> current;
-        first[i] = current;
+        std::cin >> first[i];
     }
     int sec;
     std::cin >> sec;
-    int second[sec];
+    std::vector<int>second(sec);
+
     for (int j = 0; j < sec; j++){
-        int curr;
-        std::cin >> curr;
-        second[j] = curr;
+        std::cin >> second[j];
     }
     
     bool success = true;
