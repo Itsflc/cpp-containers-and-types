@@ -1,20 +1,19 @@
-#include <iostream>
- 
+#include<iostream>
+#include<vector>
+
 int main() {
     int n;
     std::cin >> n;
- 
-    int all[n];
+
+    std::vector<int>all(n);
     for (int i = 0; i < n; i++) {
-        int temp;
-        std::cin >> temp;
-        all[i] = temp;
+        std::cin >> all[i];
     }
-    int result[n];
+    std::vector<int>result(n);
     int unique = 0;
-    
-    bool was[1001] = {false};
- 
+
+    std::vector<bool>was(1001, false);
+
     for (int i = n - 1; i > -1; i--) {
         int current = all[i];
         
