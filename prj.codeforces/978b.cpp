@@ -6,7 +6,6 @@ int main(){
     int len;
     std::cin >> len;
     std::vector<char>line(len);
-    char line[len];
     for (int i = 0; i < len; i++){
         std::cin >> line[i];
     }
