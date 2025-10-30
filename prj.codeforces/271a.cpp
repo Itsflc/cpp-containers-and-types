@@ -11,4 +11,4 @@ int main(){
         int a = year/1000;
         if (a!=b && a!=c && a!=d && b!=c && b!=d && c!=d){flag = true;}
     }
-    std::cout<<year;
+    std::cout<<year;}

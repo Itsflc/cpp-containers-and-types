@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/misis2025f-25-04-pazov-s-m/build/cmake_install.cmake",
+		"C:/misis2025f-25-04-pazov-s-m/build/prj.codeforces/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
