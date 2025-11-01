@@ -469,6 +469,19 @@ depend:
 	$(MAKE) $(MAKESILENT) -f prj.codeforces\CMakeFiles\978b.dir\build.make /nologo -$(MAKEFLAGS) prj.codeforces\CMakeFiles\978b.dir\build
 .PHONY : 978b\fast
 
+#=============================================================================
+# Target rules for targets named complex
+
+# Build rule for target.
+complex: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) complex
+.PHONY : complex
+
+# fast build rule for target.
+complex\fast:
+	$(MAKE) $(MAKESILENT) -f prj.lab\complex\CMakeFiles\complex.dir\build.make /nologo -$(MAKEFLAGS) prj.lab\complex\CMakeFiles\complex.dir\build
+.PHONY : complex\fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -505,6 +518,7 @@ help:
 	@echo ... 977a
 	@echo ... 978a
 	@echo ... 978b
+	@echo ... complex
 .PHONY : help
 
 

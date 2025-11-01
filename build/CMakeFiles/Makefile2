@@ -53,18 +53,22 @@ CMAKE_BINARY_DIR = C:\misis2025f-25-04-pazov-s-m\build
 
 # The main recursive "all" target.
 all: prj.codeforces\all
+all: prj.lab\all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: prj.codeforces\codegen
+codegen: prj.lab\codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: prj.codeforces\preinstall
+preinstall: prj.lab\preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: prj.codeforces\clean
+clean: prj.lab\clean
 .PHONY : clean
 
 #=============================================================================
@@ -166,6 +170,44 @@ prj.codeforces\clean: prj.codeforces\CMakeFiles\977a.dir\clean
 prj.codeforces\clean: prj.codeforces\CMakeFiles\978a.dir\clean
 prj.codeforces\clean: prj.codeforces\CMakeFiles\978b.dir\clean
 .PHONY : prj.codeforces\clean
+
+#=============================================================================
+# Directory level rules for directory prj.lab
+
+# Recursive "all" directory target.
+prj.lab\all: prj.lab\complex\all
+.PHONY : prj.lab\all
+
+# Recursive "codegen" directory target.
+prj.lab\codegen: prj.lab\complex\codegen
+.PHONY : prj.lab\codegen
+
+# Recursive "preinstall" directory target.
+prj.lab\preinstall: prj.lab\complex\preinstall
+.PHONY : prj.lab\preinstall
+
+# Recursive "clean" directory target.
+prj.lab\clean: prj.lab\complex\clean
+.PHONY : prj.lab\clean
+
+#=============================================================================
+# Directory level rules for directory prj.lab\complex
+
+# Recursive "all" directory target.
+prj.lab\complex\all: prj.lab\complex\CMakeFiles\complex.dir\all
+.PHONY : prj.lab\complex\all
+
+# Recursive "codegen" directory target.
+prj.lab\complex\codegen: prj.lab\complex\CMakeFiles\complex.dir\codegen
+.PHONY : prj.lab\complex\codegen
+
+# Recursive "preinstall" directory target.
+prj.lab\complex\preinstall:
+.PHONY : prj.lab\complex\preinstall
+
+# Recursive "clean" directory target.
+prj.lab\complex\clean: prj.lab\complex\CMakeFiles\complex.dir\clean
+.PHONY : prj.lab\complex\clean
 
 #=============================================================================
 # Target rules for target prj.codeforces/CMakeFiles/136a.dir
@@ -1062,6 +1104,38 @@ prj.codeforces\CMakeFiles\978b.dir\codegen:
 prj.codeforces\CMakeFiles\978b.dir\clean:
 	$(MAKE) $(MAKESILENT) -f prj.codeforces\CMakeFiles\978b.dir\build.make /nologo -$(MAKEFLAGS) prj.codeforces\CMakeFiles\978b.dir\clean
 .PHONY : prj.codeforces\CMakeFiles\978b.dir\clean
+
+#=============================================================================
+# Target rules for target prj.lab/complex/CMakeFiles/complex.dir
+
+# All Build rule for target.
+prj.lab\complex\CMakeFiles\complex.dir\all:
+	$(MAKE) $(MAKESILENT) -f prj.lab\complex\CMakeFiles\complex.dir\build.make /nologo -$(MAKEFLAGS) prj.lab\complex\CMakeFiles\complex.dir\depend
+	$(MAKE) $(MAKESILENT) -f prj.lab\complex\CMakeFiles\complex.dir\build.make /nologo -$(MAKEFLAGS) prj.lab\complex\CMakeFiles\complex.dir\build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\misis2025f-25-04-pazov-s-m\build\CMakeFiles --progress-num=57,58 "Built target complex"
+.PHONY : prj.lab\complex\CMakeFiles\complex.dir\all
+
+# Build rule for subdir invocation for target.
+prj.lab\complex\CMakeFiles\complex.dir\rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\misis2025f-25-04-pazov-s-m\build\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 /nologo -$(MAKEFLAGS) prj.lab\complex\CMakeFiles\complex.dir\all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\misis2025f-25-04-pazov-s-m\build\CMakeFiles 0
+.PHONY : prj.lab\complex\CMakeFiles\complex.dir\rule
+
+# Convenience name for target.
+complex: prj.lab\complex\CMakeFiles\complex.dir\rule
+.PHONY : complex
+
+# codegen rule for target.
+prj.lab\complex\CMakeFiles\complex.dir\codegen:
+	$(MAKE) $(MAKESILENT) -f prj.lab\complex\CMakeFiles\complex.dir\build.make /nologo -$(MAKEFLAGS) prj.lab\complex\CMakeFiles\complex.dir\codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\misis2025f-25-04-pazov-s-m\build\CMakeFiles --progress-num=57,58 "Finished codegen for target complex"
+.PHONY : prj.lab\complex\CMakeFiles\complex.dir\codegen
+
+# clean rule for target.
+prj.lab\complex\CMakeFiles\complex.dir\clean:
+	$(MAKE) $(MAKESILENT) -f prj.lab\complex\CMakeFiles\complex.dir\build.make /nologo -$(MAKEFLAGS) prj.lab\complex\CMakeFiles\complex.dir\clean
+.PHONY : prj.lab\complex\CMakeFiles\complex.dir\clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

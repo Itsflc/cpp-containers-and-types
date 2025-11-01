@@ -30,3 +30,8 @@ C:/misis2025f-25-04-pazov-s-m/build/prj.codeforces/CMakeFiles/978a.dir
 C:/misis2025f-25-04-pazov-s-m/build/prj.codeforces/CMakeFiles/978b.dir
 C:/misis2025f-25-04-pazov-s-m/build/prj.codeforces/CMakeFiles/edit_cache.dir
 C:/misis2025f-25-04-pazov-s-m/build/prj.codeforces/CMakeFiles/rebuild_cache.dir
+C:/misis2025f-25-04-pazov-s-m/build/prj.lab/CMakeFiles/edit_cache.dir
+C:/misis2025f-25-04-pazov-s-m/build/prj.lab/CMakeFiles/rebuild_cache.dir
+C:/misis2025f-25-04-pazov-s-m/build/prj.lab/complex/CMakeFiles/complex.dir
+C:/misis2025f-25-04-pazov-s-m/build/prj.lab/complex/CMakeFiles/edit_cache.dir
+C:/misis2025f-25-04-pazov-s-m/build/prj.lab/complex/CMakeFiles/rebuild_cache.dir
