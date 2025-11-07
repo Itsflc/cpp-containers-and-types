@@ -1,4 +1,4 @@
-20251107-09:27:07
+20251107-13:15:42
 OK: file codeforces.id is correct
 ERROR: invalid file name 136a
 ERROR: invalid file name 263a
@@ -13,4 +13,4 @@ ERROR: invalid file name 977a
 ERROR: invalid file name 978a
 ERROR: invalid file name 978b
 OK: CMake generator successed
-OK: CMake build (MSVC x64) successed
+ERROR: CMake build (MSVC x64) failed
