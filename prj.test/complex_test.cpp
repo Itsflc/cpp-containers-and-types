@@ -1,6 +1,6 @@
 #include <iostream>
 #include <sstream>
-#include <prj.lab/complex/complex.hpp>
+#include <complex/complex.hpp>
 
 int main()
 {
