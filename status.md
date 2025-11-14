@@ -1,11 +1,7 @@
-STAMP: 20251114-101920
+STAMP: 20251114-135340
 OK: file codeforces.id is correct
-ERROR: file prj.test/arrayd_doctest.cpp is absent
-ERROR: file prj.test/arrayt_doctest.cpp is absent
-ERROR: file prj.test/complex_doctest.cpp is absent
-ERROR: file prj.test/rational_doctest.cpp is absent
-ERROR: file prj.test/stackl_doctest.cpp is absent
-ERROR: file prj.test/queue_doctest.cpp is absent
+ERROR: file prj.labs/CMakeLists.txt is absent
+ERROR: file prj.test/rational_test.cpp is absent
 OK: CMake generator successed
 ERROR: invalid file name 136a
 ERROR: invalid file name 263a

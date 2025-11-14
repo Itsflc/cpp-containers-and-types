@@ -70,7 +70,7 @@ D:/projects/misis2025-check/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest
 Release/D:/projects/misis2025-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_stackl.exe
 Release/D:/projects/misis2025-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_stackl.exe.exe
 7/8 Test #8: doctest_stackl ...................***Not Run   0.00 sec
-8/8 Test #4: doctest_complex_io ...............***Failed    0.03 sec
+8/8 Test #4: doctest_complex_io ...............***Failed    0.04 sec
 
 0% tests passed, 8 tests failed out of 8
 
