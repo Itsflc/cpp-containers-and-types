@@ -8,7 +8,6 @@ Rational::Rational(std::int32_t numer, std::int32_t denom) {
 	else { throw std::invalid_argument("Division by zero"); }
 	normalize();
 }
-Rational::Separator = '/';
 
 std::int32_t Rational::num() const { return num_; }
 std::int32_t Rational::den() const { return den_; }
