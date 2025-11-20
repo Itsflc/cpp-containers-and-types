@@ -1,111 +1,147 @@
-#include <iostream>
-#include <sstream>
-#include "complex.hpp"
+#include <complex/complex.hpp>
 
-Complex::Complex(const double real)
-: Complex(real, 0.0)
-{
+Complex::Complex(double real, double imagin) {
+    this->real = real;
+    this->imagin = imagin;
 }
 
-Complex::Complex(const double real, const double imaginary)
-: re(real)
-, im(imaginary)
-{
+const char Complex::LeftBrace = '{';
+const char Complex::RightBrace = '}';
+const char Complex::Separator = ',';
+
+bool Complex::operator==(const Complex& other) const { return (this->imagin == other.imagin && this->real == other.real); }
+bool Complex::operator!=(const Complex& other) const { return !(*this == other); }
+
+
+Complex Complex::operator-(const Complex& other) const {
+	Complex temp;
+	temp.real = this->real - other.real;
+	temp.imagin = this->imagin - other.imagin;
+	return temp;
+}
+Complex Complex::operator+(const Complex& other) const {
+	Complex temp;
+	temp.real = this->real + other.real;
+	temp.imagin = this->imagin + other.imagin;
+	return temp;
+}
+Complex Complex::operator*(const Complex& other) const {
+	Complex temp;
+	temp.real = this->real * other.real - this->imagin * other.imagin;
+	temp.imagin = this->real * other.imagin + this->imagin * other.real;
+	return temp;
+}
+Complex Complex::operator/(const Complex& other) const {
+	double znamenatel = other.real * other.real + other.imagin * other.imagin;
+	Complex conj(other.real, -1 * other.imagin);
+	Complex temp = *this * conj;
+	return Complex(temp.real / znamenatel, temp.imagin / znamenatel);
 }
 
-Complex& Complex::operator+=(const Complex& rhs)
-{
-    re += rhs.re;
-    im += rhs.im;
-    return *this;
+Complex& Complex::operator+=(const Complex& other) {
+	this->real += other.real;
+	this->imagin += other.imagin;
+	return *this;
 }
 
-Complex& Complex::operator-=(const Complex& rhs)
-{
-    re -= rhs.re;
-    im -= rhs.im;
-    return *this;
+Complex& Complex::operator+=(const double number) {
+	this->real += number;
+	return *this;
+}
+Complex& Complex::operator-=(const Complex& other) {
+	this->real -= other.real;
+	this->imagin -= other.imagin;
+	return *this;
+}
+Complex& Complex::operator-=(const double number) {
+	this->real -= number;
+	return *this;
+}
+Complex& Complex::operator*=(const Complex& other) {
+	*this = *this * other;
+	return *this;
+}
+Complex& Complex::operator*=(const double number) {
+	this->real *= number;
+	this->imagin *= number;
+	return *this;
+}
+Complex& Complex::operator/=(const Complex& other) {
+	*this = *this / other;
+	return *this;
+}
+Complex& Complex::operator/=(const double number) {
+	this->real /= number;
+	this->imagin /= number;
+	return *this;
 }
 
-Complex& Complex::operator*=(const Complex& rhs)
-{
-    double re_after = re * rhs.re - im * rhs.im;
-    double im_after = re * rhs.im + im * rhs.re;
-    re = re_after;
-    im = im_after;
-    return *this;
+
+std::ostream& Complex::WriteTo(std::ostream& OSTREAM) const {
+	OSTREAM << Complex::LeftBrace << this->real << Complex::Separator << this->imagin << Complex::RightBrace;
+	return OSTREAM;
 }
 
-Complex& Complex::operator*=(const double rhs)
-{
-    re *= rhs;
-    im *= rhs;
-    return *this;
+std::istream& Complex::ReadFrom(std::istream& ISTREAM) {
+	char LeftBrace = 0;
+	char Separator = 0;
+	char RightBrace = 0;
+	double re = 0.0;
+	double im = 0.0;
+
+	ISTREAM >> LeftBrace >> re >> Separator >> im >> RightBrace;
+	if (ISTREAM.good()) {
+		if ( (Complex::LeftBrace == LeftBrace) && (Complex::Separator == Separator) && (Complex::RightBrace == RightBrace) ) 
+		{
+			real = re;
+			imagin = im;
+		}
+		else {
+			re = 0.0;
+			im = 0.0;
+			ISTREAM.setstate(std::ios_base::failbit);
+		}
+	}
+	else {
+		re = 0.0;
+		im = 0.0;
+	}
+	return ISTREAM;
 }
 
-Complex operator+(const Complex& lhs, const Complex& rhs)
-{
-    Complex sum(lhs);
-    sum += rhs;
-    return sum;
+
+Complex operator+(const double& number, const Complex& ts) {
+	Complex temp(ts.real + number, ts.imagin);
+	return temp;
+}
+Complex operator-(const double& number, const Complex& ts){
+	Complex temp(number - ts.real, -1 * ts.imagin);
+	return temp;
+}
+Complex operator*(const double number, const Complex& ts) {
+	Complex temp(ts.real * number, ts.imagin * number);
+	return temp;
+}
+Complex operator/(const double number, const Complex& ts) {
+	double znamenatel;
+	znamenatel = ts.real * ts.real + ts.imagin * ts.imagin;
+	Complex temp(number * ts.real / znamenatel, -1 * ts.imagin * number / znamenatel );
+	return temp;
 }
 
-Complex operator-(const Complex& lhs, const Complex& rhs)
-{
-    return Complex(lhs.re - rhs.re, lhs.im - rhs.im);
+
+std::ostream& operator<<(std::ostream& OSTREAM, const Complex& ts) {
+	return ts.WriteTo(OSTREAM);
+}
+std::istream& operator>>(std::istream& ISTREAM, Complex& ts) {
+	return ts.ReadFrom(ISTREAM);
 }
 
-Complex operator*(const Complex& lhs, const Complex& rhs)
-{
-    return Complex(lhs.re * rhs.re - lhs.im * rhs.im, lhs.re * rhs.im + lhs.im * rhs.re);
-}
-
-std::ostream& Complex::writeTo(std::ostream& ostrm) const
-{
-    ostrm << leftBrace << re << separator << im << rightBrace;
-    return ostrm;
-}
-
-std::istream& Complex::readFrom(std::istream& istrm)
-{
-    char leftBrace(0);
-    double real(0.0);
-    char comma(0);
-    double imaganary(0.0);
-    char rightBrace(0);
-    istrm >> leftBrace >> real >> comma >> imaganary >> rightBrace;
-    if (istrm.good()) {
-        if ((Complex::leftBrace == leftBrace) && (Complex::separator == comma)
-            && (Complex::rightBrace == rightBrace)) {
-            re = real;
-            im = imaganary;
-        } else {
-            istrm.setstate(std::ios_base::failbit);
-        }
-    }
-    return istrm;
-}
-
-std::ostream& operator<<(std::ostream& ostrm, const Complex& rhs)
-{
-    return rhs.writeTo(ostrm);
-}
-
-std::istream& operator>>(std::istream& istrm, Complex& rhs)
-{
-    return rhs.readFrom(istrm);
-}
-
-bool testParse(const std::string& str)
-{
-    std::istringstream istrm(str);
-    Complex z;
-    istrm >> z;
-    if (istrm.good()) {
-        std::cout << "Read success: " << str << " -> " << z << std::endl;
-    } else {
-        std::cout << "Read error : " << str << " -> " << z << std::endl;
-    }
-    return istrm.good();
-}
-
+bool testParse(const std::string& STRING) {
+	std::istringstream inp_str_stream(STRING);
+	Complex z;
+	inp_str_stream >> z;
+	if (inp_str_stream.good()) { std::cout << "Read success: " << STRING << " -> " << z << std::endl; }
+	else { std::cout << "Read error: " << STRING << " -> " << z << std::endl; }
+	return inp_str_stream.good();
+};
