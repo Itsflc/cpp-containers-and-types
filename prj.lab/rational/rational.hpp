@@ -23,6 +23,11 @@ public:
   [[nodiscard]] bool operator>(const Rational& other) const noexcept;
   [[nodiscard]] bool operator>=(const Rational& other) const noexcept;
 
+	[[nodiscard]] Rational operator+(const Rational& other) const noexcept;
+	[[nodiscard]] Rational operator-(const Rational& other) const noexcept;
+	[[nodiscard]] Rational operator*(const Rational& other) const noexcept;
+	Rational operator/(const Rational& other) const;
+
 	Rational& operator+=(const Rational& other) noexcept;
 	Rational& operator-=(const Rational& other) noexcept;
 	Rational& operator*=(const Rational& other) noexcept;
