@@ -9,8 +9,8 @@ Rational::Rational(std::int32_t numer, std::int32_t denom) {
 	normalize();
 }
 
-std::int32_t num() const { return num_; }
-std::int32_t den() const { return den_; }
+std::int32_t Rational::num() const { return num_; }
+std::int32_t Rational::den() const { return den_; }
 
 
 Rational& Rational::normalize() noexcept {
