@@ -2,7 +2,7 @@
 #include<stdexcept>
 
 
-Rational::Rational(std::int32_t numer, std::int32_t denom) noexcept {
+Rational::Rational(std::int32_t numer, std::int32_t denom) {
 	num_ = numer;
 	if (denom != 0) { den_ = denom; }
 	else { throw std::invalid_argument("Division by zero"); }
