@@ -35,7 +35,7 @@ public:
 
 	std::ostream& WriteTo(std::ostream& OSTREAM) const;
 	std::istream& ReadFrom(std::istream& ISTREAM);
-}
+};
 
 [[nodiscard]] Rational operator+(const int& number, const Rational& ts) noexcept;
 [[nodiscard]] Rational operator-(const int& number, const Rational& ts) noexcept;
