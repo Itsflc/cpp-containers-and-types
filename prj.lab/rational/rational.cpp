@@ -1,3 +1,7 @@
+#include<rational/rational.hpp>
+#include<stdexcept>
+
+
 Rational::Rational(std::int32_t numer, std::int32_t denom) noexcept {
 	num_ = numer;
 	if (denom != 0) { den_ = denom; }
