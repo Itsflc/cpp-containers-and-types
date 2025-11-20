@@ -77,7 +77,7 @@ Rational& Rational::operator/=(const Rational& other) {
 
 
 std::ostream& Rational::WriteTo(std::ostream& OSTREAM) const {
-	OSTREAM << this->num_ << Rational::Separator << this->den_;
+	OSTREAM << this->num_ << '/' << this->den_;
 	return OSTREAM;
 }
 std::istream& Rational::ReadFrom(std::istream& ISTREAM) {
