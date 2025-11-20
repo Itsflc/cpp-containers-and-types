@@ -15,6 +15,7 @@ public:
   Rational(std::int32_t numer) : Rational(numer, 1) {}
   Rational(std::int32_t numer, std::int32_t denom);
   Rational& normalize() noexcept;
+	static const char Separator;
 
 std::int32_t num() const;
 std::int32_t den() const;
