@@ -4,6 +4,8 @@
 
 #include <cstdint>
 #include <iosfwd>
+#include<iostream>
+#include<sstream>
 
 struct Rational {
 private:
