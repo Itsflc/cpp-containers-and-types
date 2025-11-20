@@ -16,6 +16,9 @@ public:
   Rational(std::int32_t numer, std::int32_t denom);
   Rational& normalize() noexcept;
 
+std::int32_t num() const;
+std::int32_t den() const;
+
   [[nodiscard]] bool operator==(const Rational& other) const noexcept;
   [[nodiscard]] bool operator!=(const Rational& other) const noexcept;
   [[nodiscard]] bool operator<(const Rational& other) const noexcept;
