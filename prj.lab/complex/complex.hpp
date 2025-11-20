@@ -15,13 +15,13 @@ struct Complex {
     static const char RightBrace;
     static const char Separator;
 
-    bool operator==(const Complex& other) const;
-    bool operator!=(const Complex& other) const;
+    [[nodiscard]] bool operator==(const Complex& other) const;
+    [[nodiscard]] bool operator!=(const Complex& other) const;
 
-    Complex operator-(const Complex& other) const;
-    Complex operator+(const Complex& other) const;
-    Complex operator*(const Complex& other) const;
-    Complex operator/(const Complex& other) const;
+    [[nodiscard]] Complex operator-(const Complex& other) const;
+    [[nodiscard]] Complex operator+(const Complex& other) const;
+    [[nodiscard]] Complex operator*(const Complex& other) const;
+    [[nodiscard]] Complex operator/(const Complex& other) const;
 
     Complex& operator+=(const Complex& other);
     Complex& operator+=(const double number);
@@ -37,14 +37,14 @@ struct Complex {
 };
 
 
-Complex operator-(const double& number, const Complex& ts);
-Complex operator+(const double& number, const Complex& ts);
-Complex operator*(const double number, const Complex& ts);
-Complex operator/(const double number, const Complex& ts);
+[[nodiscard]] Complex operator-(const double& number, const Complex& ts);
+[[nodiscard]] Complex operator+(const double& number, const Complex& ts);
+[[nodiscard]] Complex operator*(const double number, const Complex& ts);
+[[nodiscard]] Complex operator/(const double number, const Complex& ts);
 
 std::ostream& operator<<(std::ostream& OSTREAM, const Complex& ts);
 std::istream& operator>>(std::istream& ISTREAM, Complex& ts);
 
-bool testParse(const std::string& STRING);
+[[nodiscard]] bool testParse(const std::string& STRING);
 
 #endif
