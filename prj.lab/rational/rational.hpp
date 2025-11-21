@@ -29,6 +29,8 @@ std::int32_t den() const;
   [[nodiscard]] bool operator>(const Rational& other) const noexcept;
   [[nodiscard]] bool operator>=(const Rational& other) const noexcept;
 
+	[[nodiscard]] Rational operator-() noexcept;
+
 	[[nodiscard]] Rational operator+(const Rational& other) const noexcept;
 	[[nodiscard]] Rational operator-(const Rational& other) const noexcept;
 	[[nodiscard]] Rational operator*(const Rational& other) const noexcept;
