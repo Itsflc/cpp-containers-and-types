@@ -7,7 +7,7 @@
 #include<iostream>
 #include<sstream>
 
-Class Rational {
+class Rational {
 private:
 	std::int32_t num_ = 0;
 	std::int32_t den_ = 1;
