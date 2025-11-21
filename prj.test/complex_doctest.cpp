@@ -3,37 +3,27 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
 
-TEST_CASE("[complex] - ctor") {
+TEST_CASE("[complex] - Конструкторы") {
   CHECK(Complex() == Complex(0.0, 0.0));
   CHECK(Complex(2.0) == Complex(2.0, 0.0));
 
 
-
-
-
-  SUBCASE("constructor with two parameters") {
-    Complex c(3.0, 4.0);
-    CHECK(c.real == 3.0);
-    CHECK(c.imagin == 4.0);
+  SUBCASE("Конструкторы с двумя параметрами") {
+    Complex c(3.7, -4.1);
+    CHECK(c.real == 3.7);
+    CHECK(c.imagin == -4.1);
   }
   
-  SUBCASE("constructor with one parameter (real only)") {
-    Complex c(5.0);
-    CHECK(c.real == 5.0);
-    CHECK(c.imagin == 0.0);
-  }
-  
-  SUBCASE("negative values") {
+  SUBCASE("Негативные") {
     Complex c(-2.5, -3.7);
     CHECK(c.real == -2.5);
     CHECK(c.imagin == -3.7);
   }
 }
 
-// ========== ОПЕРАТОРЫ СРАВНЕНИЯ ==========
-TEST_CASE("[complex] - comparison operators") {
-  Complex c1(2.0, 3.0);
-  Complex c2(2.0, 3.0);
+TEST_CASE("[complex] - Операторы сравнения") {
+  Complex c1(12.0, 3.0);
+  Complex c2(12.0, 3.0);
   Complex c3(1.0, 1.0);
   
   SUBCASE("operator==") {
@@ -47,13 +37,12 @@ TEST_CASE("[complex] - comparison operators") {
   }
 }
 
-// ========== АРИФМЕТИЧЕСКИЕ ОПЕРАТОРЫ (членские) ==========
-TEST_CASE("[complex] - arithmetic operators (member)") {
+TEST_CASE("[complex] - Арифметические операторы между комплексными") {
   SUBCASE("operator+") {
-    Complex c1(1.0, 2.0);
+    Complex c1(1.5, -2.0);
     Complex c2(3.0, 4.0);
     Complex result = c1 + c2;
-    CHECK(result == Complex(4.0, 6.0));
+    CHECK(result == Complex(4.5, 2.0));
   }
   
   SUBCASE("operator-") {
@@ -63,40 +52,38 @@ TEST_CASE("[complex] - arithmetic operators (member)") {
     CHECK(result == Complex(4.0, 5.0));
   }
   
-  SUBCASE("operator* - basic multiplication") {
+  SUBCASE("operator* базовое умножение") {
     Complex c1(2.0, 0.0);
     Complex c2(3.0, 0.0);
     Complex result = c1 * c2;
     CHECK(result == Complex(6.0, 0.0));
   }
   
-  SUBCASE("operator* - complex multiplication") {
+  SUBCASE("operator* - комплексное умножение") {
     Complex c1(1.0, 2.0);
     Complex c2(3.0, 4.0);
-    // (1 + 2i)(3 + 4i) = 3 + 4i + 6i + 8i^2 = 3 + 10i - 8 = -5 + 10i
     Complex result = c1 * c2;
     CHECK(result == Complex(-5.0, 10.0));
   }
   
-  SUBCASE("operator/ - basic division") {
+  SUBCASE("operator/ - базовое деление") {
     Complex c1(6.0, 0.0);
     Complex c2(2.0, 0.0);
     Complex result = c1 / c2;
     CHECK(result == Complex(3.0, 0.0));
   }
   
-  SUBCASE("operator/ - complex division") {
-    Complex c1(1.0, 0.0);
-    Complex c2(0.0, 1.0); // i
-    // 1/i = -i
+SUBCASE("operator/ - комплексное деление") { 
+    Complex c1(10.0, 0.0);
+    Complex c2(0.0, 5.0); // 5i
+    // 10 / 5i = 10 * (-5i) / (5i * (-5i)) = -50i / 25 = -2i
     Complex result = c1 / c2;
     CHECK_EQ(result.real, doctest::Approx(0.0).epsilon(1e-10));
-    CHECK_EQ(result.imagin, doctest::Approx(-1.0).epsilon(1e-10));
-  }
+    CHECK_EQ(result.imagin, doctest::Approx(-2.0).epsilon(1e-10));
+}
 }
 
-// ========== ОПЕРАТОРЫ += ==========
-TEST_CASE("[complex] - operator+=") {
+TEST_CASE("[complex] - оператор +=") {
   SUBCASE("operator+= with Complex") {
     Complex c1(1.0, 2.0);
     Complex c2(3.0, 4.0);
