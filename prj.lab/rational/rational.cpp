@@ -39,6 +39,13 @@ bool Rational::operator<(const Rational& other) const noexcept { return (this->n
 bool Rational::operator>=(const Rational& other) const noexcept { return !(*this < other); }
 bool Rational::operator<=(const Rational& other) const noexcept { return !(*this > other); }
 
+Rational Rational::operator-() noexcept{
+	Rational temp(-1 * this->num_, this->den_);
+	return temp;
+}
+
+
+
 Rational Rational::operator+(const Rational& other) const noexcept{
 	Rational temp(this->num_ * other.den_ + this->den_ * other.num_, this->den_ * other.den_);
 	return temp;
