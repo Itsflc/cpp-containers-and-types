@@ -1,6 +1,5 @@
 Unable to find executable: D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
 Unable to find executable: D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_rational.exe
-Unable to find executable: D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_rational_io.exe
 Errors while running CTest
 Output from these tests are in: D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/build.check/Testing/Temporary/LastTest.log
 Use "--rerun-failed --output-on-failure" to re-run the failed cases verbosely.
