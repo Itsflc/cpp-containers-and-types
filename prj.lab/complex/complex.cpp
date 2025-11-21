@@ -13,6 +13,14 @@ bool Complex::operator==(const Complex& other) const noexcept { return (this->im
 bool Complex::operator!=(const Complex& other) const noexcept { return !(*this == other); }
 
 
+Complex Complex::operator-() const noexcept {
+  Complex temp;
+  temp.real = -this->real;
+  temp.imagin = -this->imagin;
+  return temp;
+}
+
+
 Complex Complex::operator-(const Complex& other) const noexcept {
 	Complex temp;
 	temp.real = this->real - other.real;
