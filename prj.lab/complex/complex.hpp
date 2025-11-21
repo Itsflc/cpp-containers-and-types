@@ -4,7 +4,8 @@
 #include<iostream>
 #include<sstream>
 
-struct Complex {
+Class Complex {
+public:
     Complex() noexcept : Complex(0, 0) {}
     Complex(double real) noexcept : Complex(real, 0) {}
     explicit Complex(double real, double imagin) noexcept;
