@@ -1,27 +1,27 @@
 #include <complex/complex.hpp>
+#include <sstream>
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <doctest/doctest.h>
 
-TEST_CASE("[complex] - Конструкторы") {
+TEST_CASE("[complex] - Constructors") {
   CHECK(Complex() == Complex(0.0, 0.0));
   CHECK(Complex(2.0) == Complex(2.0, 0.0));
 
-
-  SUBCASE("Конструкторы с двумя параметрами") {
+  SUBCASE("Constructors with two parameters") {
     Complex c(3.7, -4.1);
     CHECK(c.real == 3.7);
     CHECK(c.imagin == -4.1);
   }
   
-  SUBCASE("Негативные") {
+  SUBCASE("Negative values") {
     Complex c(-2.5, -3.7);
     CHECK(c.real == -2.5);
     CHECK(c.imagin == -3.7);
   }
 }
 
-TEST_CASE("[complex] - Операторы сравнения") {
+TEST_CASE("[complex] - Comparison operators") {
   Complex c1(12.0, 3.0);
   Complex c2(12.0, 3.0);
   Complex c3(1.0, 1.0);
@@ -37,7 +37,7 @@ TEST_CASE("[complex] - Операторы сравнения") {
   }
 }
 
-TEST_CASE("[complex] - Арифметические операторы между комплексными") {
+TEST_CASE("[complex] - Arithmetic operators (Complex)") {
   SUBCASE("operator+") {
     Complex c1(1.5, -2.0);
     Complex c2(3.0, 4.0);
@@ -52,38 +52,37 @@ TEST_CASE("[complex] - Арифметические операторы межд�
     CHECK(result == Complex(4.0, 5.0));
   }
   
-  SUBCASE("operator* базовое умножение") {
+  SUBCASE("operator* basic") {
     Complex c1(2.0, 0.0);
     Complex c2(3.0, 0.0);
     Complex result = c1 * c2;
     CHECK(result == Complex(6.0, 0.0));
   }
   
-  SUBCASE("operator* - комплексное умножение") {
+  SUBCASE("operator* complex") {
     Complex c1(1.0, 2.0);
     Complex c2(3.0, 4.0);
     Complex result = c1 * c2;
     CHECK(result == Complex(-5.0, 10.0));
   }
   
-  SUBCASE("operator/ - базовое деление") {
+  SUBCASE("operator/ basic") {
     Complex c1(6.0, 0.0);
     Complex c2(2.0, 0.0);
     Complex result = c1 / c2;
     CHECK(result == Complex(3.0, 0.0));
   }
   
-SUBCASE("operator/ - комплексное деление") { 
+  SUBCASE("operator/ complex") {
     Complex c1(10.0, 0.0);
-    Complex c2(0.0, 5.0); // 5i
-    // 10 / 5i = 10 * (-5i) / (5i * (-5i)) = -50i / 25 = -2i
+    Complex c2(0.0, 5.0);
     Complex result = c1 / c2;
     CHECK_EQ(result.real, doctest::Approx(0.0).epsilon(1e-10));
     CHECK_EQ(result.imagin, doctest::Approx(-2.0).epsilon(1e-10));
-}
+  }
 }
 
-TEST_CASE("[complex] - оператор +=") {
+TEST_CASE("[complex] - operator+=") {
   SUBCASE("operator+= with Complex") {
     Complex c1(1.0, 2.0);
     Complex c2(3.0, 4.0);
@@ -105,7 +104,6 @@ TEST_CASE("[complex] - оператор +=") {
   }
 }
 
-// ========== ОПЕРАТОРЫ -= ==========
 TEST_CASE("[complex] - operator-=") {
   SUBCASE("operator-= with Complex") {
     Complex c1(5.0, 7.0);
@@ -128,7 +126,6 @@ TEST_CASE("[complex] - operator-=") {
   }
 }
 
-// ========== ОПЕРАТОРЫ *= ==========
 TEST_CASE("[complex] - operator*=") {
   SUBCASE("operator*= with Complex") {
     Complex c1(1.0, 2.0);
@@ -151,7 +148,6 @@ TEST_CASE("[complex] - operator*=") {
   }
 }
 
-// ========== ОПЕРАТОРЫ /= ==========
 TEST_CASE("[complex] - operator/=") {
   SUBCASE("operator/= with Complex") {
     Complex c1(6.0, 0.0);
@@ -167,8 +163,7 @@ TEST_CASE("[complex] - operator/=") {
   }
 }
 
-// ========== ГЛОБАЛЬНЫЕ ОПЕРАТОРЫ (число + Complex) ==========
-TEST_CASE("[complex] - global operators (number + Complex)") {
+TEST_CASE("[complex] - global operators") {
   SUBCASE("double + Complex") {
     Complex c(2.0, 3.0);
     Complex result = 5.0 + c;
@@ -194,7 +189,6 @@ TEST_CASE("[complex] - global operators (number + Complex)") {
   }
 }
 
-// ========== ПОТОКОВЫЕ ОПЕРАТОРЫ ==========
 TEST_CASE("[complex] - stream operators") {
   SUBCASE("operator<< output") {
     Complex c(3.0, 4.0);
@@ -211,7 +205,7 @@ TEST_CASE("[complex] - stream operators") {
     CHECK(c == Complex(5.0, 6.0));
   }
   
-  SUBCASE("operator>> input invalid format") {
+  SUBCASE("operator>> input invalid") {
     std::istringstream iss("[5,6]");
     Complex c;
     iss >> c;
@@ -228,7 +222,6 @@ TEST_CASE("[complex] - stream operators") {
   }
 }
 
-// ========== ВСПОМОГАТЕЛЬНАЯ ФУНКЦИЯ ==========
 TEST_CASE("[complex] - testParse function") {
   SUBCASE("valid parse") {
     CHECK(testParse("{1,2}"));
@@ -239,7 +232,6 @@ TEST_CASE("[complex] - testParse function") {
   }
   
   SUBCASE("valid with spaces") {
-    // зависит от поведения operator>>
     CHECK(testParse("{ 1 , 2 }"));
   }
 }
