@@ -19,6 +19,8 @@ public:
     [[nodiscard]] bool operator==(const Complex& other) const noexcept;
     [[nodiscard]] bool operator!=(const Complex& other) const noexcept;
 
+    [[nodiscard]] Complex operator-() const noexcept;
+
     [[nodiscard]] Complex operator-(const Complex& other) const noexcept;
     [[nodiscard]] Complex operator+(const Complex& other) const noexcept;
     [[nodiscard]] Complex operator*(const Complex& other) const noexcept;
