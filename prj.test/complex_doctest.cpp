@@ -180,6 +180,9 @@ TEST_CASE("[complex] - global operators") {
     Complex c(2.0, 3.0);
     Complex result = 3.0 * c;
     CHECK(result == Complex(6.0, 9.0));
+    Complex g(2.0, 3.0);
+    Complex result2 = -c;
+    CHECK(result2 == Complex(-2.0, -3.0));
   }
   
   SUBCASE("double / Complex") {
