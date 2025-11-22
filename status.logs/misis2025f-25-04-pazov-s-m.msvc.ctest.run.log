@@ -11,25 +11,16 @@ Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-2
 1/4 Test #1: doctest_complex ..................***Not Run   0.00 sec
     Start 2: doctest_complex_io
     Start 3: doctest_rational
-Could not find executable D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_rational.exe
-Looked in the following places:
-D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_rational.exe
-D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_rational.exe.exe
-D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_rational.exe
-D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_rational.exe.exe
-Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_rational.exe
-Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_rational.exe.exe
-2/4 Test #3: doctest_rational .................***Not Run   0.00 sec
     Start 4: doctest_rational_io
-3/4 Test #2: doctest_complex_io ...............***Failed    0.08 sec
-4/4 Test #4: doctest_rational_io ..............***Failed    0.03 sec
+2/4 Test #2: doctest_complex_io ...............***Failed    0.20 sec
+3/4 Test #3: doctest_rational .................   Passed    0.13 sec
+4/4 Test #4: doctest_rational_io ..............***Failed    0.07 sec
 
-0% tests passed, 4 tests failed out of 4
+25% tests passed, 3 tests failed out of 4
 
-Total Test time (real) =   0.14 sec
+Total Test time (real) =   0.35 sec
 
 The following tests FAILED:
 	  1 - doctest_complex (Not Run)
 	  2 - doctest_complex_io (Failed)
-	  3 - doctest_rational (Not Run)
 	  4 - doctest_rational_io (Failed)
