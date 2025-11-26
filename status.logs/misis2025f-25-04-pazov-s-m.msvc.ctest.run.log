@@ -1,24 +1,26 @@
-Test project D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/build.check
+Test project D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/build.check
     Start 1: doctest_complex
-Could not find executable D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
+Could not find executable D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
 Looked in the following places:
-D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
-D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe.exe
-D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_complex.exe
-D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_complex.exe.exe
-Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
-Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe.exe
-1/4 Test #1: doctest_complex ..................***Not Run   0.00 sec
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_complex.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_complex.exe.exe
+Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
+Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe.exe
+1/5 Test #1: doctest_complex ..................***Not Run   0.00 sec
     Start 2: doctest_complex_io
     Start 3: doctest_rational
     Start 4: doctest_rational_io
-2/4 Test #2: doctest_complex_io ...............***Failed    0.20 sec
-3/4 Test #3: doctest_rational .................   Passed    0.13 sec
-4/4 Test #4: doctest_rational_io ..............***Failed    0.07 sec
+    Start 5: doctest_rational_contracts
+2/5 Test #2: doctest_complex_io ...............***Failed    0.15 sec
+3/5 Test #3: doctest_rational .................   Passed    0.11 sec
+4/5 Test #4: doctest_rational_io ..............***Failed    0.07 sec
+5/5 Test #5: doctest_rational_contracts .......   Passed    0.03 sec
 
-25% tests passed, 3 tests failed out of 4
+40% tests passed, 3 tests failed out of 5
 
-Total Test time (real) =   0.35 sec
+Total Test time (real) =   0.22 sec
 
 The following tests FAILED:
 	  1 - doctest_complex (Not Run)
