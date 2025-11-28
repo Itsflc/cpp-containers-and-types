@@ -10,8 +10,8 @@ public:
     Complex(double real) noexcept : Complex(real, 0) {}
     explicit Complex(double real, double imagin) noexcept;
 
-    double real = 0.0;
-    double imagin = 0.0;
+    double re = 0.0;
+    double im = 0.0;
     static const char LeftBrace;
     static const char RightBrace;
     static const char Separator;
