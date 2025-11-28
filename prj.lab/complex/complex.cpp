@@ -1,68 +1,68 @@
 #include <complex/complex.hpp>
 
 Complex::Complex(double real, double imagin) noexcept {
-    this->real = real;
-    this->imagin = imagin;
+    this->re = real;
+    this->im = imagin;
 }
 
 const char Complex::LeftBrace = '{';
 const char Complex::RightBrace = '}';
 const char Complex::Separator = ',';
 
-bool Complex::operator==(const Complex& other) const noexcept { return (this->imagin == other.imagin && this->real == other.real); }
+bool Complex::operator==(const Complex& other) const noexcept { return (this->im == other.im && this->re == other.re); }
 bool Complex::operator!=(const Complex& other) const noexcept { return !(*this == other); }
 
 
 Complex Complex::operator-() const noexcept {
   Complex temp;
-  temp.real = -this->real;
-  temp.imagin = -this->imagin;
+  temp.re = -this->re;
+  temp.im = -this->im;
   return temp;
 }
 
 
 Complex Complex::operator-(const Complex& other) const noexcept {
 	Complex temp;
-	temp.real = this->real - other.real;
-	temp.imagin = this->imagin - other.imagin;
+	temp.re = this->re - other.re;
+	temp.im = this->im - other.im;
 	return temp;
 }
 Complex Complex::operator+(const Complex& other) const noexcept {
 	Complex temp;
-	temp.real = this->real + other.real;
-	temp.imagin = this->imagin + other.imagin;
+	temp.re = this->re + other.re;
+	temp.im = this->im + other.im;
 	return temp;
 }
 Complex Complex::operator*(const Complex& other) const noexcept {
 	Complex temp;
-	temp.real = this->real * other.real - this->imagin * other.imagin;
-	temp.imagin = this->real * other.imagin + this->imagin * other.real;
+	temp.re = this->re * other.re - this->im * other.im;
+	temp.im = this->re * other.im + this->im * other.re;
 	return temp;
 }
 Complex Complex::operator/(const Complex& other) const {
-	double znamenatel = other.real * other.real + other.imagin * other.imagin;
-	Complex conj(other.real, -1 * other.imagin);
+	double znamenatel = other.re * other.re + other.im * other.im;
+	Complex conj(other.re, -1 * other.im);
 	Complex temp = *this * conj;
-	return Complex(temp.real / znamenatel, temp.imagin / znamenatel);
+	return Complex(temp.re / znamenatel, temp.im / znamenatel);
 }
 
 Complex& Complex::operator+=(const Complex& other) noexcept {
-	this->real += other.real;
-	this->imagin += other.imagin;
+	this->re += other.re;
+	this->im += other.im;
 	return *this;
 }
 
 Complex& Complex::operator+=(const double number) noexcept {
-	this->real += number;
+	this->re += number;
 	return *this;
 }
 Complex& Complex::operator-=(const Complex& other) noexcept {
-	this->real -= other.real;
-	this->imagin -= other.imagin;
+	this->re -= other.re;
+	this->im -= other.im;
 	return *this;
 }
 Complex& Complex::operator-=(const double number) noexcept {
-	this->real -= number;
+	this->re -= number;
 	return *this;
 }
 Complex& Complex::operator*=(const Complex& other) noexcept {
@@ -70,8 +70,8 @@ Complex& Complex::operator*=(const Complex& other) noexcept {
 	return *this;
 }
 Complex& Complex::operator*=(const double number) noexcept {
-	this->real *= number;
-	this->imagin *= number;
+	this->re *= number;
+	this->im *= number;
 	return *this;
 }
 Complex& Complex::operator/=(const Complex& other) {
@@ -79,14 +79,14 @@ Complex& Complex::operator/=(const Complex& other) {
 	return *this;
 }
 Complex& Complex::operator/=(const double number) {
-	this->real /= number;
-	this->imagin /= number;
+	this->re /= number;
+	this->im /= number;
 	return *this;
 }
 
 
 std::ostream& Complex::WriteTo(std::ostream& OSTREAM) const {
-	OSTREAM << Complex::LeftBrace << this->real << Complex::Separator << this->imagin << Complex::RightBrace;
+	OSTREAM << Complex::LeftBrace << this->re << Complex::Separator << this->im << Complex::RightBrace;
 	return OSTREAM;
 }
 
@@ -94,46 +94,46 @@ std::istream& Complex::ReadFrom(std::istream& ISTREAM) {
 	char LeftBrace = 0;
 	char Separator = 0;
 	char RightBrace = 0;
-	double re = 0.0;
-	double im = 0.0;
+	double real = 0.0;
+	double imagin = 0.0;
 
 	ISTREAM >> LeftBrace >> re >> Separator >> im >> RightBrace;
 	if (ISTREAM.good()) {
 		if ( (Complex::LeftBrace == LeftBrace) && (Complex::Separator == Separator) && (Complex::RightBrace == RightBrace) ) 
 		{
-			real = re;
-			imagin = im;
+			re = real;
+			im = imagin;
 		}
 		else {
-			re = 0.0;
-			im = 0.0;
+			real = 0.0;
+			imagin = 0.0;
 			ISTREAM.setstate(std::ios_base::failbit);
 		}
 	}
 	else {
-		re = 0.0;
-		im = 0.0;
+		real = 0.0;
+		imagin = 0.0;
 	}
 	return ISTREAM;
 }
 
 
 Complex operator+(const double& number, const Complex& ts) noexcept {
-	Complex temp(ts.real + number, ts.imagin);
+	Complex temp(ts.re + number, ts.im);
 	return temp;
 }
 Complex operator-(const double& number, const Complex& ts) noexcept {
-	Complex temp(number - ts.real, -1 * ts.imagin);
+	Complex temp(number - ts.re, -1 * ts.im);
 	return temp;
 }
 Complex operator*(const double number, const Complex& ts) noexcept {
-	Complex temp(ts.real * number, ts.imagin * number);
+	Complex temp(ts.re * number, ts.im * number);
 	return temp;
 }
 Complex operator/(const double number, const Complex& ts) {
 	double znamenatel;
-	znamenatel = ts.real * ts.real + ts.imagin * ts.imagin;
-	Complex temp(number * ts.real / znamenatel, -1 * ts.imagin * number / znamenatel );
+	znamenatel = ts.re * ts.re + ts.im * ts.im;
+	Complex temp(number * ts.re / znamenatel, -1 * ts.im * number / znamenatel );
 	return temp;
 }
 
