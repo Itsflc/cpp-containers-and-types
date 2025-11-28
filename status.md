@@ -1,4 +1,4 @@
-STAMP: 20251128-092348
+STAMP: 20251128-095010
 OK: file codeforces.id is correct
 ERROR: file prj.labs/CMakeLists.txt is absent
 ERROR: file prj.test/rational_test.cpp is absent

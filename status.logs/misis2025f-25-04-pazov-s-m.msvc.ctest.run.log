@@ -1,5 +1,15 @@
 Test project D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/build.check
-    Start 1: doctest_complex
+    Start 1: doctest_arrayd
+Could not find executable D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_arrayd.exe
+Looked in the following places:
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_arrayd.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_arrayd.exe.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_arrayd.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_arrayd.exe.exe
+Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_arrayd.exe
+Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_arrayd.exe.exe
+1/6 Test #1: doctest_arrayd ...................***Not Run   0.00 sec
+    Start 2: doctest_complex
 Could not find executable D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
 Looked in the following places:
 D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
@@ -8,21 +18,22 @@ D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04
 D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_complex.exe.exe
 Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe
 Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_complex.exe.exe
-1/5 Test #1: doctest_complex ..................***Not Run   0.00 sec
-    Start 2: doctest_complex_io
-    Start 3: doctest_rational
-    Start 4: doctest_rational_io
-    Start 5: doctest_rational_contracts
-2/5 Test #2: doctest_complex_io ...............***Failed    0.21 sec
-3/5 Test #3: doctest_rational .................   Passed    0.14 sec
-4/5 Test #4: doctest_rational_io ..............***Failed    0.09 sec
-5/5 Test #5: doctest_rational_contracts .......   Passed    0.04 sec
+2/6 Test #2: doctest_complex ..................***Not Run   0.00 sec
+    Start 3: doctest_complex_io
+    Start 4: doctest_rational
+    Start 5: doctest_rational_io
+    Start 6: doctest_rational_contracts
+3/6 Test #3: doctest_complex_io ...............***Failed    0.18 sec
+4/6 Test #4: doctest_rational .................   Passed    0.13 sec
+5/6 Test #5: doctest_rational_io ..............***Failed    0.08 sec
+6/6 Test #6: doctest_rational_contracts .......   Passed    0.03 sec
 
-40% tests passed, 3 tests failed out of 5
+33% tests passed, 4 tests failed out of 6
 
-Total Test time (real) =   0.28 sec
+Total Test time (real) =   0.23 sec
 
 The following tests FAILED:
-	  1 - doctest_complex (Not Run)
-	  2 - doctest_complex_io (Failed)
-	  4 - doctest_rational_io (Failed)
+	  1 - doctest_arrayd (Not Run)
+	  2 - doctest_complex (Not Run)
+	  3 - doctest_complex_io (Failed)
+	  5 - doctest_rational_io (Failed)
