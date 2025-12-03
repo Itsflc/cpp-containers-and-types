@@ -1,5 +1,6 @@
 #include "arrayd.hpp"
 #include<stdexcept>
+#include <cstddef>
 
 ArrayD::ArrayD() : ArrayD(1) {}
 ArrayD::ArrayD(std::ptrdiff_t Size) {
