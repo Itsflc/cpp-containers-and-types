@@ -10,7 +10,7 @@ class ArrayD{
   float* data_ = nullptr;
 
 public: 
-	ArrayD();
+  ArrayD()
   ArrayD(std::ptrdiff_t Size)
   ArrayD(const ArrayD &other)
   ArrayD& operator=(const ArrayD& other)
@@ -21,12 +21,6 @@ public:
   void insert(const std::ptrdiff_t index, const float value)
   ~ArrayD()
 }
-
-
-
-
-
-
 
 
 #endif
