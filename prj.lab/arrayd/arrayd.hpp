@@ -10,8 +10,8 @@ class ArrayD{
   float* data_ = nullptr;
 
 public: 
-  ArrayD()
-  ArrayD(std::ptrdiff_t Size)
+  ArrayD();
+  ArrayD(std::ptrdiff_t Size);
   ArrayD(const ArrayD &other)
   ArrayD& operator=(const ArrayD& other)
   float& operator[](const std::ptrdiff_t index)
@@ -20,7 +20,7 @@ public:
   void resize(const std::ptrdiff_t new_size)
   void insert(const std::ptrdiff_t index, const float value)
   void remove(std::ptrdiff_t index)
-  ~ArrayD()
+  ~ArrayD();
 }
 
 
