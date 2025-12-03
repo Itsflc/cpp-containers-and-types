@@ -19,6 +19,7 @@ public:
   std::ptrdiff_t size() const noexcept { return size_; }
   void resize(const std::ptrdiff_t new_size)
   void insert(const std::ptrdiff_t index, const float value)
+  void remove(std::ptrdiff_t index)
   ~ArrayD()
 }
 
