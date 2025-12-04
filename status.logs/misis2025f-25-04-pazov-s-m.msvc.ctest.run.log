@@ -14,15 +14,15 @@ Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis202
     Start 4: doctest_rational
     Start 5: doctest_rational_io
     Start 6: doctest_rational_contracts
-2/6 Test #2: doctest_complex ..................***Failed    0.44 sec
-3/6 Test #3: doctest_complex_io ...............***Failed    0.34 sec
-4/6 Test #4: doctest_rational .................   Passed    0.24 sec
-5/6 Test #5: doctest_rational_io ..............***Failed    0.15 sec
-6/6 Test #6: doctest_rational_contracts .......   Passed    0.10 sec
+2/6 Test #2: doctest_complex ..................***Failed    0.26 sec
+3/6 Test #3: doctest_complex_io ...............***Failed    0.20 sec
+4/6 Test #4: doctest_rational .................   Passed    0.15 sec
+5/6 Test #5: doctest_rational_io ..............***Failed    0.09 sec
+6/6 Test #6: doctest_rational_contracts .......   Passed    0.05 sec
 
 33% tests passed, 4 tests failed out of 6
 
-Total Test time (real) =   0.64 sec
+Total Test time (real) =   0.36 sec
 
 The following tests FAILED:
 	  1 - doctest_arrayd (Not Run)
