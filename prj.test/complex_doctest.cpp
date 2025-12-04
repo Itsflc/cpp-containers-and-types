@@ -10,14 +10,14 @@ TEST_CASE("[complex] - Constructors") {
 
   SUBCASE("Constructors with two parameters") {
     Complex c(3.7, -4.1);
-    CHECK(c.real == 3.7);
-    CHECK(c.imagin == -4.1);
+    CHECK(c.re == 3.7);
+    CHECK(c.im == -4.1);
   }
   
   SUBCASE("Negative values") {
     Complex c(-2.5, -3.7);
-    CHECK(c.real == -2.5);
-    CHECK(c.imagin == -3.7);
+    CHECK(c.re == -2.5);
+    CHECK(c.im == -3.7);
   }
 }
 
@@ -77,8 +77,8 @@ TEST_CASE("[complex] - Arithmetic operators (Complex)") {
     Complex c1(10.0, 0.0);
     Complex c2(0.0, 5.0);
     Complex result = c1 / c2;
-    CHECK_EQ(result.real, doctest::Approx(0.0).epsilon(1e-10));
-    CHECK_EQ(result.imagin, doctest::Approx(-2.0).epsilon(1e-10));
+    CHECK_EQ(result.re, doctest::Approx(0.0).epsilon(1e-10));
+    CHECK_EQ(result.im, doctest::Approx(-2.0).epsilon(1e-10));
   }
 }
 
@@ -220,8 +220,8 @@ TEST_CASE("[complex] - stream operators") {
     Complex c;
     iss >> c;
     CHECK(iss.good());
-    CHECK(c.real == -2.5);
-    CHECK(c.imagin == -3.7);
+    CHECK(c.re == -2.5);
+    CHECK(c.im == -3.7);
   }
 }
 
