@@ -22,7 +22,7 @@ public:
   void insert(const std::ptrdiff_t index, const float value);
   void remove(std::ptrdiff_t index);
   ~ArrayD();
-}
+};
 
 
 #endif
