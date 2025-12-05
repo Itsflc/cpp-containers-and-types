@@ -1,4 +1,4 @@
-STAMP: 20251204-094016
+STAMP: 20251205-101755
 OK: file codeforces.id is correct
 ERROR: file prj.labs/CMakeLists.txt is absent
 ERROR: file prj.test/rational_test.cpp is absent
@@ -9,4 +9,6 @@ STATUS: lab complex_io - test-failed
 STATUS: lab rational - test-ok
 STATUS: lab rational_io - test-failed
 STATUS: lab rational_contracts - test-ok
-ERROR: lab arrayd - test build failed
+STATUS: lab arrayd - test-failed
+ERROR: lab stacka - test build failed
+ERROR: lab stackl - test build failed
