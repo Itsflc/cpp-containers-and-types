@@ -254,7 +254,7 @@ TEST_CASE("[rational] - stream operators") {
     std::istringstream iss("5/6");
     Rational r;
     iss >> r;
-    CHECK(iss.good());
+    CHECK(!iss.fail());
     CHECK(r == Rational(5, 6));
   }
   
