@@ -13,4 +13,7 @@ target_link_libraries(rational_doctest rational)
 add_executable(rational_io rational_io.cpp)
 target_link_libraries(rational_io rational)
 
+add_executable(rational_contracts rational_contracts.cpp)
+target_link_libraries(rational_contracts rational)
+
 
