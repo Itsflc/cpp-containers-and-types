@@ -1,3 +1,10 @@
+#include <complex/complex.hpp>
+#include <sstream>
+
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include <doctest/doctest.h>
+
+
 TEST_CASE("[complex] - stream operators") {
     SUBCASE("operator<< output format") {
         Complex c(3.0, 4.0);
