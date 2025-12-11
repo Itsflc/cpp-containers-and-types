@@ -1,4 +1,4 @@
-#include <rational.hpp>
+#include <rational/rational.hpp>
 #include <sstream>
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
