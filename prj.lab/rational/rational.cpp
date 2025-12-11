@@ -99,8 +99,7 @@ std::istream& Rational::ReadFrom(std::istream& ISTREAM) {
 
 	ISTREAM >> numerator >> Separator >> denominator;
 	if (!ISTREAM.fail() && denominator != 0) {
-		if (Rational::Separator == Separator)
-		{
+		if (Rational::Separator == Separator) {
 			num_ = numerator;
 			den_ = denominator;
 			normalize();
