@@ -150,6 +150,6 @@ bool testParse(const std::string& STRING) {
 	inp_str_stream >> r;
 	if (!inp_str_stream.fail()) { std::cout << "Read success: " << STRING << " -> " << r << std::endl; }
 	else { std::cout << "Read error: " << STRING << " -> " << r << std::endl; }
-	return inp_str_stream.good();
+	return (!inp_str_stream.fail());
 }
 
