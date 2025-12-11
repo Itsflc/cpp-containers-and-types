@@ -302,7 +302,7 @@ TEST_CASE("[rational] - chain operations") {
     Rational r2(3, 4);
     Rational r3(8, 9);
     Rational result = r1 * r2 / r3;
-    CHECK(result == Rational(1, 1));
+    CHECK(result == Rational(9, 16));
   }
   
   SUBCASE("mixed operations") {
