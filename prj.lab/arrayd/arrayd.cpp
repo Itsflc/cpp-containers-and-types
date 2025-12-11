@@ -21,14 +21,13 @@ ArrayD::ArrayD(const ArrayD &other)
 	}
 
 ArrayD& ArrayD::operator=(const ArrayD& other) {
-		if (this->data_ != nullptr) { delete[] this->data_; }
-  
-		this->capacity_ = other.capacity_;
-		this->data_ = new float[other.capacity_];
-		this->size_ = other.size_;
-
-		for (int i = 0; i < other.capacity_; i++) { this->data_[i] = other.data_[i]; }
-  
+		if (this != &other) {
+			if (this->data_ != nullptr) { delete[] this->data_; }
+			this->capacity_ = other.capacity_;
+			this->data_ = new float[other.capacity_];
+			this->size_ = other.size_;
+			for (int i = 0; i < other.capacity_; i++) { this->data_[i] = other.data_[i]; }
+		}
 		return *this;
 	}
 
