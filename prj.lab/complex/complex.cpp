@@ -96,30 +96,30 @@ std::ostream& Complex::WriteTo(std::ostream& OSTREAM) const {
 }
 
 std::istream& Complex::ReadFrom(std::istream& ISTREAM) {
-	char LeftBrace = 0;
-	char Separator = 0;
-	char RightBrace = 0;
-	double real = 0.0;
-	double imagin = 0.0;
+    char LeftBrace = 0;
+    char Separator = 0;
+    char RightBrace = 0;
+    double real = 0.0;
+    double imagin = 0.0;
 
-	ISTREAM >> LeftBrace >> re >> Separator >> im >> RightBrace;
-	if (ISTREAM.good()) {
-		if ( (Complex::LeftBrace == LeftBrace) && (Complex::Separator == Separator) && (Complex::RightBrace == RightBrace) ) 
-		{
-			re = real;
-			im = imagin;
-		}
-		else {
-			real = 0.0;
-			imagin = 0.0;
-			ISTREAM.setstate(std::ios_base::failbit);
-		}
-	}
-	else {
-		real = 0.0;
-		imagin = 0.0;
-	}
-	return ISTREAM;
+    ISTREAM >> LeftBrace >> real >> Separator >> imagin >> RightBrace;
+    if (ISTREAM.good()) {
+        if ((Complex::LeftBrace == LeftBrace) && (Complex::Separator == Separator) && (Complex::RightBrace == RightBrace)) {
+            this->re = real;
+            this->im = imagin;
+        }
+        else {
+            this->re = 0.0;
+            this->im = 0.0;
+            ISTREAM.setstate(std::ios_base::failbit);
+        }
+    }
+    else {
+        this->re = 0.0;
+        this->im = 0.0;
+		ISTREAM.setstate(std::ios_base::failbit);
+    }
+    return ISTREAM;
 }
 
 
