@@ -269,7 +269,7 @@ TEST_CASE("[rational] - stream operators") {
     std::istringstream iss("-3/8");
     Rational r;
     iss >> r;
-    CHECK(iss.good());
+    CHECK(!iss.fail());
     CHECK(r == Rational(-3, 8));
   }
 }
