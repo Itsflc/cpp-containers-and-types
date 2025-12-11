@@ -16,11 +16,13 @@ StackA::StackA(const StackA& other) {
 }
 
 StackA& StackA::operator=(const StackA& other) {
-	if (data_ != nullptr) { delete[] data_; }
-	data_ = new int64_t[other.capacity_];
-	capacity_ = other.capacity_;
-	size_ = other.size_;
-	for (int64_t i = 0; i < other.size_; i++) { data_[i] = other.data_[i]; }
+	if (this != &other){
+		if (data_ != nullptr) { delete[] data_; }
+		data_ = new int64_t[other.capacity_];
+		capacity_ = other.capacity_;
+		size_ = other.size_;
+		for (int64_t i = 0; i < other.size_; i++) { data_[i] = other.data_[i]; }
+	}
 	return *this;
 }
 
@@ -53,8 +55,8 @@ int64_t StackA::top() const {
 
 void StackA::clear() noexcept { 
 	size_ = 0; 
-	data_[0] = 0;
 }
 
 StackA::~StackA() noexcept {
 	delete[] data_;
+}
