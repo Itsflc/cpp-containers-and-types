@@ -8,7 +8,6 @@ Rational::Rational(std::int32_t numer, std::int32_t denom) {
 	else { throw std::invalid_argument("Division by zero"); }
 	normalize();
 }
-
 std::int32_t Rational::num() const { return num_; }
 std::int32_t Rational::den() const { return den_; }
 
@@ -16,6 +15,11 @@ std::int32_t Rational::den() const { return den_; }
 Rational& Rational::normalize() noexcept {
 	if (this->den_ < 0) {
 		this->den_ *= -1;
+		this->num_ *= -1;
+	}
+	bool flagg = false;
+	if (this->num_ < 0) {
+		flagg = true;
 		this->num_ *= -1;
 	}
 
@@ -29,6 +33,8 @@ Rational& Rational::normalize() noexcept {
 	}
 	this->den_ /= copy_n;
 	this->num_ /= copy_n;
+
+	if (flagg) { this-> num_ *= -1; }
 	return *this;
 }
 
