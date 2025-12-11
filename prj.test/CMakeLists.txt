@@ -10,4 +10,7 @@ target_link_libraries(complex_io complex)
 add_executable(rational_doctest rational_doctest.cpp)
 target_link_libraries(rational_doctest rational)
 
+add_executable(rational_io rational_io.cpp)
+target_link_libraries(rational_io rational)
+
 
