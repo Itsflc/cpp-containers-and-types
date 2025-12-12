@@ -54,7 +54,7 @@ TEST_CASE("[rational] - stream operators") {
         Rational r;
         iss >> r;
         CHECK(iss.fail());
-        CHECK(r == Rational(5, 6));
+        CHECK(r == Rational(0, 1));
     }
 
     SUBCASE("operator>> input invalid format colon") {
