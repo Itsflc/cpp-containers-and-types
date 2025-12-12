@@ -109,14 +109,10 @@ std::istream& Complex::ReadFrom(std::istream& ISTREAM) {
             this->im = imagin;
         }
         else {
-            this->re = 0.0;
-            this->im = 0.0;
             ISTREAM.setstate(std::ios_base::failbit);
         }
     }
     else {
-        this->re = 0.0;
-        this->im = 0.0;
 		ISTREAM.setstate(std::ios_base::failbit);
     }
     return ISTREAM;
