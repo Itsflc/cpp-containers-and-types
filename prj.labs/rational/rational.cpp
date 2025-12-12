@@ -94,8 +94,8 @@ std::ostream& Rational::WriteTo(std::ostream& OSTREAM) const {
 }
 std::istream& Rational::ReadFrom(std::istream& ISTREAM) {
 	char Separator = 0;
-	std::int32_t numerator = 1230;
-	std::int32_t denominator = 7;
+	std::int32_t numerator = 0;
+	std::int32_t denominator = 0;
 
 	ISTREAM >> numerator >> Separator >> denominator;
 	if (!ISTREAM.fail() && denominator != 0) {
