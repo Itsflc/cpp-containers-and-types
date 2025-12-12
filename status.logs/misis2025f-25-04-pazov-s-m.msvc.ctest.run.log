@@ -1,11 +1,31 @@
 Test project D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/build.check
-    Start 1: doctest_arrayd
-    Start 2: doctest_complex
-    Start 3: doctest_complex_io
-    Start 4: doctest_rational
-    Start 5: doctest_rational_io
-    Start 6: doctest_rational_contracts
-    Start 7: doctest_stackl
+      Start  1: doctest_arrayd
+      Start  2: doctest_complex
+      Start  3: doctest_complex_io
+      Start  4: doctest_rational
+      Start  5: doctest_rational_io
+      Start  6: doctest_rational_contracts
+      Start  7: doctest_queuea
+Could not find executable D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuea.exe
+Looked in the following places:
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuea.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuea.exe.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_queuea.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_queuea.exe.exe
+Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuea.exe
+Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuea.exe.exe
+ 1/10 Test  #7: doctest_queuea ...................***Not Run   0.00 sec
+      Start  8: doctest_queuel
+Could not find executable D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuel.exe
+Looked in the following places:
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuel.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuel.exe.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_queuel.exe
+D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_queuel.exe.exe
+Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuel.exe
+Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_queuel.exe.exe
+ 2/10 Test  #8: doctest_queuel ...................***Not Run   0.00 sec
+      Start  9: doctest_stackl
 Could not find executable D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_stackl.exe
 Looked in the following places:
 D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_stackl.exe
@@ -14,22 +34,24 @@ D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04
 D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/Release/doctest_stackl.exe.exe
 Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_stackl.exe
 Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/bin.check/doctest_stackl.exe.exe
-1/8 Test #7: doctest_stackl ...................***Not Run   0.00 sec
-    Start 8: doctest_stacka
-2/8 Test #1: doctest_arrayd ...................***Failed    0.40 sec
-3/8 Test #2: doctest_complex ..................   Passed    0.34 sec
-4/8 Test #3: doctest_complex_io ...............***Failed    0.28 sec
-5/8 Test #4: doctest_rational .................   Passed    0.22 sec
-6/8 Test #5: doctest_rational_io ..............***Failed    0.16 sec
-7/8 Test #6: doctest_rational_contracts .......   Passed    0.10 sec
-8/8 Test #8: doctest_stacka ...................   Passed    0.04 sec
+ 3/10 Test  #9: doctest_stackl ...................***Not Run   0.00 sec
+      Start 10: doctest_stacka
+ 4/10 Test  #1: doctest_arrayd ...................***Failed    0.76 sec
+ 5/10 Test  #2: doctest_complex ..................   Passed    0.66 sec
+ 6/10 Test  #3: doctest_complex_io ...............***Failed    0.55 sec
+ 7/10 Test  #4: doctest_rational .................   Passed    0.44 sec
+ 8/10 Test  #5: doctest_rational_io ..............***Failed    0.32 sec
+ 9/10 Test  #6: doctest_rational_contracts .......   Passed    0.20 sec
+10/10 Test #10: doctest_stacka ...................   Passed    0.08 sec
 
-50% tests passed, 4 tests failed out of 8
+40% tests passed, 6 tests failed out of 10
 
-Total Test time (real) =   0.48 sec
+Total Test time (real) =   0.98 sec
 
 The following tests FAILED:
 	  1 - doctest_arrayd (Failed)
 	  3 - doctest_complex_io (Failed)
 	  5 - doctest_rational_io (Failed)
-	  7 - doctest_stackl (Not Run)
+	  7 - doctest_queuea (Not Run)
+	  8 - doctest_queuel (Not Run)
+	  9 - doctest_stackl (Not Run)
