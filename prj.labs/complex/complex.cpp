@@ -12,7 +12,7 @@ const char Complex::RightBrace = '}';
 const char Complex::Separator = ',';
 
 bool Complex::operator==(const Complex& other) const noexcept { 
-	constexpr double EPSILON = 1e-9;
+	constexpr double EPSILON = 4.5e-16;
 	return std::abs(this->re - other.re) < EPSILON && std::abs(this->im - other.im) < EPSILON;
 }
 bool Complex::operator!=(const Complex& other) const noexcept { return !(*this == other); }
