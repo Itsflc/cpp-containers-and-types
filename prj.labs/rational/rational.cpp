@@ -105,14 +105,10 @@ std::istream& Rational::ReadFrom(std::istream& ISTREAM) {
 			normalize();
 		}
 		else {
-			num_ = 0;
-			den_ = 1;
 			ISTREAM.setstate(std::ios_base::failbit);
 		}
 	}
 	else {
-		num_ = 0;
-		den_ = 1;
 		ISTREAM.setstate(std::ios_base::failbit);
 	}
 	return ISTREAM;
