@@ -98,14 +98,10 @@ std::istream& Rational::ReadFrom(std::istream& ISTREAM) {
 	std::int32_t denominator = 0;
 
 	ISTREAM >> numerator >> Separator >> denominator;
-	if (!ISTREAM.fail() && denominator != 0) {
+	if (!ISTREAM.fail() && denominator != 0 && Rational::Separator == Separator) {
 		num_ = numerator;
 		den_ = denominator;
 		normalize();
-		
-		if (Rational::Separator != Separator) {
-			ISTREAM.setstate(std::ios_base::failbit);
-		}
 	}
 	else {
 		ISTREAM.setstate(std::ios_base::failbit);
