@@ -1,3 +1,9 @@
+#pragma once
+#ifndef STACKL_STACKL_HPP
+#define STACKL_STACKL_HPP
+
+
+
 #include <cstddef>
 #include <cstdint>
 
@@ -31,3 +37,5 @@ private:
 
     Node* head_ = nullptr; 
 };
+
+#endif
