@@ -1,4 +1,4 @@
-STAMP: 20251219-123656
+STAMP: 20251219-132630
 OK: file codeforces.id is correct
 ERROR: file prj.test/arrayd_test.cpp is absent
 ERROR: file prj.test/stackl_test.cpp is absent
@@ -14,6 +14,6 @@ STATUS: lab rational_io - test-failed
 STATUS: lab rational_contracts - test-ok
 STATUS: lab arrayd - test-failed
 STATUS: lab stacka - test-ok
-ERROR: lab stackl - test build failed
+STATUS: lab stackl - test-ok
 ERROR: lab queuea - test build failed
 ERROR: lab queuel - test build failed
