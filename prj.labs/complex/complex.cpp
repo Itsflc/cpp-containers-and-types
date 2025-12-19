@@ -1,6 +1,7 @@
 #include <complex/complex.hpp>
 #include <cmath>
 #include <limits>
+#include <stdexcept>
 
 Complex::Complex(double real, double imagin) noexcept {
     this->re = real;
@@ -134,6 +135,10 @@ Complex operator*(const double number, const Complex& ts) noexcept {
 Complex operator/(const double number, const Complex& ts) {
 	double znamenatel;
 	znamenatel = ts.re * ts.re + ts.im * ts.im;
+	constexpr double EPSILON = 4.45e-16;
+	if (std::abs(znamenatel) < EPSILON) {
+		throw std::invalid_argument("Division by zero");
+	}
 	Complex temp(number * ts.re / znamenatel, -1 * ts.im * number / znamenatel );
 	return temp;
 }
