@@ -1,4 +1,5 @@
 #include "stackl.hpp"
+#include<stdexcept>
 
 StackL::StackL(const StackL& source) {
     if (source.head_ == nullptr) {
@@ -60,10 +61,16 @@ void StackL::push(const int64_t val) {
 }
 
 int64_t& StackL::top() {
+    if (head_ == nullptr) {
+        throw std::invalid_argument("Top on empty stack");
+    }
     return head_->val;
 }
 
 int64_t StackL::top() const {
+    if (head_ == nullptr) {
+        throw std::invalid_argument("Top on empty stack");
+    }
     return head_->val;
 }
 
