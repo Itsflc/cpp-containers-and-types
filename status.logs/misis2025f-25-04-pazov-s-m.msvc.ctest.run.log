@@ -1,3 +1,4 @@
+Internal ctest changing into directory: D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/build.check
 Test project D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis2025f-25-04-pazov-s-m/build.check
       Start  1: doctest_arrayd
       Start  2: doctest_complex
@@ -27,18 +28,18 @@ Release/D:/private/syncthing/obsidian.dvpsun/3C/misis2025f-25-check-run/misis202
  2/10 Test  #8: doctest_queuel ...................***Not Run   0.00 sec
       Start  9: doctest_stackl
       Start 10: doctest_stacka
- 3/10 Test  #1: doctest_arrayd ...................***Failed    0.50 sec
- 4/10 Test  #2: doctest_complex ..................   Passed    0.43 sec
- 5/10 Test  #3: doctest_complex_io ...............***Failed    0.37 sec
- 6/10 Test  #4: doctest_rational .................   Passed    0.30 sec
- 7/10 Test  #5: doctest_rational_io ..............***Failed    0.24 sec
- 8/10 Test  #6: doctest_rational_contracts .......   Passed    0.17 sec
- 9/10 Test  #9: doctest_stackl ...................   Passed    0.11 sec
+ 3/10 Test  #1: doctest_arrayd ...................***Failed    0.40 sec
+ 4/10 Test  #2: doctest_complex ..................   Passed    0.35 sec
+ 5/10 Test  #3: doctest_complex_io ...............***Failed    0.31 sec
+ 6/10 Test  #4: doctest_rational .................   Passed    0.26 sec
+ 7/10 Test  #5: doctest_rational_io ..............***Failed    0.22 sec
+ 8/10 Test  #6: doctest_rational_contracts .......   Passed    0.15 sec
+ 9/10 Test  #9: doctest_stackl ...................   Passed    0.10 sec
 10/10 Test #10: doctest_stacka ...................   Passed    0.04 sec
 
 50% tests passed, 5 tests failed out of 10
 
-Total Test time (real) =   0.63 sec
+Total Test time (real) =   0.41 sec
 
 The following tests FAILED:
 	  1 - doctest_arrayd (Failed)
