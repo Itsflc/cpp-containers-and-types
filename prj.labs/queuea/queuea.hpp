@@ -1,6 +1,6 @@
 #pragma once
-#ifndef QUEUEA_HPP
-#define QUEUEA_HPP
+#ifndef QUEUEA_QUEUEA_HPP
+#define QUEUEA_QUEUEA_HPP
 
 #include<cstdint>
 #include<stdexcept>
