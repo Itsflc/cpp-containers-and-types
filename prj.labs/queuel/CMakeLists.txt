@@ -1,1 +1,1 @@
-add_library(queuel queue.cpp queue.hpp)
+add_library(queuel queuel.cpp queuel.hpp)
