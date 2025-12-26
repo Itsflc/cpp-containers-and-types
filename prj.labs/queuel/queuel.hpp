@@ -1,6 +1,6 @@
 #pragma once
 #ifndef QUEUEL_QUEUEL_HPP
-#def QUEUEL_QUEUEL_HPP
+#define QUEUEL_QUEUEL_HPP
 
 
 #include <cstddef>
