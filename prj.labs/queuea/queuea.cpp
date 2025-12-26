@@ -83,8 +83,3 @@ void QueueA::clear() noexcept {
 QueueA::~QueueA() noexcept {
 	delete[] data_;
 }
-
-
-int main() {
-	std::cout << "Hello> WORLD";
-}
