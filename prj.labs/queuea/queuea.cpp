@@ -1,4 +1,7 @@
 #include <queuea/queuea.hpp>
+#include<cstdint>
+#include<stdexcept>
+#include<iostream>
 
 QueueA::QueueA() {
 	data_ = new int64_t[20];
