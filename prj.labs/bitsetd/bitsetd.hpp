@@ -1,3 +1,9 @@
+#pragma once
+#ifndef BITSETD_BITSETD_HPP
+#define BITSETD_BITSETD_HPP
+
+
+
 #include<iostream>
 #include<cstdint>
 #include<vector>
@@ -101,3 +107,6 @@ bitset operator>>(const bitset& lhs, const std::int32_t shift);
 bitset operator&(const bitset& lhs, const bitset& rhs);
 bitset operator|(const bitset& lhs, const bitset& rhs);
 bitset operator^(const bitset& lhs, const bitset& rhs);
+
+
+#endif
