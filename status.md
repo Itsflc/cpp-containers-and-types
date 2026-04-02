@@ -1,9 +1,6 @@
-STAMP: 20260327-094418
+STAMP: 20260402-093953
 ERROR: file prj.labs/arrayt/CMakeLists.txt is absent
 ERROR: file prj.labs/arrayt/arrayt.hpp is absent
-ERROR: file prj.labs/bitsetd/CMakeLists.txt is absent
-ERROR: file prj.labs/bitsetd/bitsetd.hpp is absent
-ERROR: file prj.labs/bitsetd/bitsetd.cpp is absent
 ERROR: file prj.test/arrayd_test.cpp is absent
 ERROR: file prj.test/arrayt_test.cpp is absent
 ERROR: file prj.test/bitsetd_profiler.cpp is absent
