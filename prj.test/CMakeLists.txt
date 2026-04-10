@@ -16,4 +16,6 @@ target_link_libraries(rational_io rational)
 add_executable(rational_contracts rational_contracts.cpp)
 target_link_libraries(rational_contracts rational)
 
+add_executable(dio_test dio_test.cpp)
+target_link_libraries(dio_test dio)
 
