@@ -1,6 +1,6 @@
 #pragma once
-#ifndef DIOSTRB_DIOSTRB_HPP
-#define DIOSTRB_DIOSTRB_HPP
+#ifndef DIO_DIO_HPP
+#define DIO_DIO_HPP
 
 #include <iostream>
 #include <string>
