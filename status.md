@@ -1,22 +1,17 @@
-STAMP: 20260514-142023
-ERROR: file prj.labs/arrayt/CMakeLists.txt is absent
-ERROR: file prj.labs/arrayt/arrayt.hpp is absent
-ERROR: file prj.labs/dio/CMakeLists.txt is absent
+STAMP: 20260515-103000
 ERROR: file prj.test/arrayd_test.cpp is absent
-ERROR: file prj.test/arrayt_test.cpp is absent
 ERROR: file prj.test/queuea_test.cpp is absent
 ERROR: file prj.test/queuel_test.cpp is absent
-ERROR: file prj.test/arrayt_test.cpp is absent
 ERROR: file prj.test/bitsetd_profiler.cpp is absent
 ERROR: file prj.test/bitsetd_test.cpp is absent
-ERROR: CMake generator failed
+OK: CMake generator successed
 ERROR: lab bitsetd - test build failed
 ERROR: lab bitsetd_m - test build failed
 ERROR: lab bitsetd_io - test build failed
 ERROR: lab arrayt - test build failed
-ERROR: lab arrayd - test build failed
-ERROR: lab queuea - test build failed
-ERROR: lab queuea_m - test build failed
-ERROR: lab queuel - test build failed
-ERROR: lab queuel_m - test build failed
-ERROR: lab rational - test build failed
+STATUS: lab arrayd - test-failed
+STATUS: lab queuea - test-failed
+STATUS: lab queuea_m - test-failed
+STATUS: lab queuel - test-ok
+STATUS: lab queuel_m - test-failed
+STATUS: lab rational - test-ok
