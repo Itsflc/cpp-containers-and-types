@@ -44,8 +44,26 @@ Release/D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest
       Start  7: doctest_complex_io
       Start  8: doctest_queuea
       Start  9: doctest_queuea_m
+Could not find executable D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuea_m.exe
+Looked in the following places:
+D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuea_m.exe
+D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuea_m.exe.exe
+D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/Release/doctest_queuea_m.exe
+D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/Release/doctest_queuea_m.exe.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuea_m.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuea_m.exe.exe
+ 5/14 Test  #9: doctest_queuea_m .................***Not Run   0.00 sec
       Start 10: doctest_queuel
       Start 11: doctest_queuel_m
+Could not find executable D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuel_m.exe
+Looked in the following places:
+D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuel_m.exe
+D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuel_m.exe.exe
+D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/Release/doctest_queuel_m.exe
+D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/Release/doctest_queuel_m.exe.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuel_m.exe
+Release/D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuel_m.exe.exe
+ 6/14 Test #11: doctest_queuel_m .................***Not Run   0.00 sec
       Start 12: doctest_rational
       Start 13: doctest_rational_io
       Start 14: doctest_jaggeda
@@ -57,20 +75,18 @@ D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/Release/doctest
 D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/Release/doctest_jaggeda.exe.exe
 Release/D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_jaggeda.exe
 Release/D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_jaggeda.exe.exe
- 5/14 Test #14: doctest_jaggeda ..................***Not Run   0.00 sec
- 6/14 Test  #1: doctest_arrayd ...................***Failed    0.57 sec
- 7/14 Test  #6: doctest_complex ..................   Passed    0.49 sec
- 8/14 Test  #7: doctest_complex_io ...............***Failed    0.44 sec
- 9/14 Test  #8: doctest_queuea ...................***Failed    0.36 sec
-10/14 Test  #9: doctest_queuea_m .................***Failed    0.31 sec
-11/14 Test #10: doctest_queuel ...................   Passed    0.24 sec
-12/14 Test #11: doctest_queuel_m .................***Failed    0.18 sec
-13/14 Test #12: doctest_rational .................   Passed    0.11 sec
+ 7/14 Test #14: doctest_jaggeda ..................***Not Run   0.00 sec
+ 8/14 Test  #1: doctest_arrayd ...................***Failed    0.36 sec
+ 9/14 Test  #6: doctest_complex ..................   Passed    0.30 sec
+10/14 Test  #7: doctest_complex_io ...............***Failed    0.24 sec
+11/14 Test  #8: doctest_queuea ...................***Failed    0.19 sec
+12/14 Test #10: doctest_queuel ...................   Passed    0.13 sec
+13/14 Test #12: doctest_rational .................   Passed    0.08 sec
 14/14 Test #13: doctest_rational_io ..............***Failed    0.04 sec
 
 21% tests passed, 11 tests failed out of 14
 
-Total Test time (real) =   0.71 sec
+Total Test time (real) =   0.48 sec
 
 The following tests FAILED:
 	  1 - doctest_arrayd (Failed)
@@ -80,7 +96,7 @@ The following tests FAILED:
 	  5 - doctest_bitsetd_m (Not Run)
 	  7 - doctest_complex_io (Failed)
 	  8 - doctest_queuea (Failed)
-	  9 - doctest_queuea_m (Failed)
-	 11 - doctest_queuel_m (Failed)
+	  9 - doctest_queuea_m (Not Run)
+	 11 - doctest_queuel_m (Not Run)
 	 13 - doctest_rational_io (Failed)
 	 14 - doctest_jaggeda (Not Run)
