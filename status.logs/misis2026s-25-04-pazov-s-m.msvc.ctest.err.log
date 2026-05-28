@@ -2,8 +2,6 @@ Unable to find executable: D:/projects/misis2026-check/misis2026s-25-04-pazov-s-
 Unable to find executable: D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_bitsetd.exe
 Unable to find executable: D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_bitsetd_io.exe
 Unable to find executable: D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_bitsetd_m.exe
-Unable to find executable: D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuea_m.exe
-Unable to find executable: D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_queuel_m.exe
 Unable to find executable: D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/bin.check/doctest_jaggeda.exe
 Errors while running CTest
 Output from these tests are in: D:/projects/misis2026-check/misis2026s-25-04-pazov-s-m/build.check/Testing/Temporary/LastTest.log
