@@ -1,8 +1,8 @@
 // 2026 by Polevoi Dmitry under Unlicense
 
 #pragma once
-#ifndef JAGGEDA_JAGGEDA_HPP_20260521
-#define JAGGEDA_JAGGEDA_HPP_20260521
+#ifndef JAGGEDA_JAGGEDA_HPP
+#define JAGGEDA_JAGGEDA_HPP
 
 #include <cstdint>
 
